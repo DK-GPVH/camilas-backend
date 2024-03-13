@@ -15,7 +15,8 @@ Debe contener :
     APP_MYSQL_PASSWORD = 
     APP_MYSQL_DB = 
     
-    JWT_SECRET_KEY =
-    
-###PASO 4:
+    JWT_SECRET_KEY = , 
+
+
+### PASO 4:
 EJECUTE EL COMANDO PARA INICIARLIZAR LA APLICACION `(env)C:/../../ python ./app/app2.py`
