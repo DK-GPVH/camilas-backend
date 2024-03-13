@@ -1,0 +1,61 @@
+body{
+    background-color: white;
+}
+
+.card{
+    background-color: aqua;
+    width: 50%;
+    max-width: 500px;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    border: 2px outset white;
+    box-sizing: content-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: translado steps(3) .5s forwards;
+    transition: background-color .3s ease,
+    border .3s ease-in;
+
+    & .num{
+        font-weight: bolder;
+        color: red;
+        font-size: 24px;
+        float: left;
+        padding: 0 .5rem;
+        background-color: white;
+    }
+
+    & .nombre{
+        width: 100px;
+        display: inline;
+        margin: 0 1rem;
+    }
+    
+    & p{
+        text-align: right;
+    }
+}
+
+.card:hover{
+    background-color: skyblue;
+    border: 2px inset aqua;
+    cursor: pointer;
+
+    & .num{
+        color: #ff00ff;
+    }
+
+    & .nombre{
+        color: gray;
+    }
+}
+
+@keyframes translado{
+    from{
+        transform: translateX(100px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+

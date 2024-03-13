@@ -1,0 +1,21 @@
+{% extends './layout.html' %}
+
+{%block title%} 
+{{ nombre_variable.titulo}}
+{% endblock %}
+
+{%block body%}
+    <h1>WELCOME TO PROJECT FLASK WITH BLUEPRINTS</h1>
+    <h2>{{ nombre_variable.titulo }}</h2>
+
+    {% if nombre_variable.numero_cursos > 0 %}
+    <h3>{{nombre_variable.numero_cursos}}</h3>
+    <ul>
+        {% for i in nombre_variable.cursos %}
+            <li>{{ i }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <h3>NO Se encontraron cursos</h3>
+    {% endif %}
+{%endblock%}

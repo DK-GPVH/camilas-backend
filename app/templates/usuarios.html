@@ -1,0 +1,17 @@
+{% extends './layout.html' %}
+
+{% block title %} Usuarios {% endblock %}
+{% block body %}
+    <h1>USUARIOS : <span>{{ data.usuarios|length }}</span></h1>
+    <ul>
+        {% for usuario in data.usuarios %}
+        <li>
+            <div class="card">
+                <span class="num">{{usuario.id}}</span>
+                <h3 class="nombre">{{usuario.nombre}}</h3>
+                <p class="correo">{{usuario.correo}}</p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
