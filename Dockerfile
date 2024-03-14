@@ -1,7 +1,7 @@
-FROM python:3.12.2
+FROM python:3.10
 
 # Establece el directorio de trabajo en /app
-WORKDIR /index
+WORKDIR /app
 
 # Copia el archivo requirements.txt al contenedor
 COPY requirements.txt .
