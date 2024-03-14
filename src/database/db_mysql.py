@@ -9,7 +9,7 @@ def get_connection():
             user = config('APP_MYSQL_USER'),
             password = config('APP_MYSQL_PASSWORD'),
             db = config('APP_MYSQL_DB'),
-            port = int(config('APP_MYSQL_PORT'))
+            port = 3306
         )
     except Exception as ex:
         print(ex)
