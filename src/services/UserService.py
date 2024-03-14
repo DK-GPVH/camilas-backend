@@ -73,7 +73,7 @@ class UserService():
         try:
             connection = get_connection()
             cursor = connection.cursor()
-            sentence_sql = f"CALL eliminar_usuario({operation["id_solicitante"]},{operation["id_perjudicado"]})"
+            sentence_sql = f"CALL eliminar_usuario({operation['id_solicitante']},{operation['id_perjudicado']})"
             usuario = None
             cursor.execute(sentence_sql)
             connection.commit()
