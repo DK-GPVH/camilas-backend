@@ -4,6 +4,7 @@ from src.services.Authentication import AuthenticationService
 from src.models.UserModel import Usuario
 from src.models.ErrorModel import Error
 from src.utils.Security import Security
+from flask_cors import cross_origin
 
 auth = Blueprint('authentication',__name__)
 
@@ -17,6 +18,7 @@ def login():
     logeo = AuthenticationService.get_authentication(credentials)
     
     if(type(logeo) == Error):
+        print(logeo.to_json())
         return jsonify(logeo.to_json()),500
     print(type(logeo) == Usuario)
     if(type(logeo) == Usuario):
