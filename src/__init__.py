@@ -1,7 +1,10 @@
 from flask import Flask,render_template
 from .routes import IndexRoute,UsuariosRoute,AuthenticationRoute
+from flask_cors import CORS
+
 
 app = Flask(__name__)
+CORS(app)
 
 def pagina_no_encontrada(error):
     print({"ESTE ES EL ERROR" : error.code})   
